@@ -16,7 +16,7 @@ import { config } from 'config';
 import "../node_modules/react-grid-layout/css/styles.css";
 import "../node_modules/react-resizable/css/styles.css";
 
-import DashboardGrid from '../components/grid';
+import Grid from '../components/Grid';
 
 
 module.exports = React.createClass({
@@ -35,42 +35,8 @@ module.exports = React.createClass({
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
-          style={{
-            background: '#252525'
-          }}
-        >
-          <Container
-            style={{
-              maxWidth: 960,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            }}
-          >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              Your Brand!
-            </Link>
-          </Container>
-        </Headroom>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
-          <DashboardGrid />
-          {this.props.children}
-        </Container>
+        <Grid />
+        {this.props.children}
       </div>
     )
   },
