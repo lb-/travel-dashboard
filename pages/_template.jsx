@@ -1,13 +1,5 @@
-
-// import { Container } from 'react-responsive-grid'
-import Headroom from 'react-headroom'
-// import '../css/markdown-styles';
-// import { rhythm } from '../utils/typography'
-
-
-// want to keep
-
 import React from 'react';
+import Headroom from 'react-headroom';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
@@ -18,6 +10,7 @@ import "../node_modules/react-resizable/css/styles.css";
 import '../css/main';
 
 import DashboardGrid from '../components/DashboardGrid';
+import Footer from '../components/Footer';
 
 
 module.exports = React.createClass({
@@ -32,11 +25,12 @@ module.exports = React.createClass({
         <Helmet
           title={config.siteTitle}
           meta={[
-            {"name": "description", "content": "Sample"},
-            {"name": "keywords", "content": "sample, something"},
+            {"name": "description", "content": "Travel Dashboard"},
+            {"name": "keywords", "content": "travel, dashboard"},
           ]}
         />
         <DashboardGrid />
+        <Footer />
         {this.props.children}
       </div>
     )
