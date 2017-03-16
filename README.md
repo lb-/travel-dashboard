@@ -3,4 +3,4 @@
 # Commands
 * $`gatsby develop`
 * $`gatsby build` // builds and deploys to a gh-pages branch
-* $`npm deploy`
+* $`npm run-script deploy`
