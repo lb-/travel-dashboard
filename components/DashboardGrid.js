@@ -69,8 +69,8 @@ class DashboardGrid extends Component {
         <div key={'city'}>
           <div className="content box notification is-warning">
             <h2 className="title">Chiang Mai</h2>
-            <p className="subtitle">City</p>
-            <p>31*, Sunny</p>
+            <p className="subtitle">Current City</p>
+            <p>31&#8451; and Sunny</p>
           </div>
         </div>
         <div key={'clock'}><Clock /></div>
