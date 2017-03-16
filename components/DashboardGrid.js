@@ -5,6 +5,7 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 import Logo from '../components/Logo';
 import Country from '../components/Country';
 import Stats from '../components/Stats';
+import Flights from '../components/Flights';
 import './dashboardgrid.less';
 
 class DashboardGrid extends Component {
@@ -78,13 +79,11 @@ class DashboardGrid extends Component {
           </div>
         </div>
         <div key={'country'}><Country/></div>
-        <div key={'flights'} className={'test'}>
-          <span className="text">Flights</span>
-        </div>
+        <div key={'flights'}><Flights /></div>
         <div key={'stats'}><Stats /></div>
       </ResponsiveReactGridLayout>
     )
   }
 };
 
-export default DashboardGrid
+export default DashboardGrid;
