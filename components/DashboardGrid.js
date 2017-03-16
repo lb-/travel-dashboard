@@ -1,6 +1,18 @@
 import React, { Component } from 'react'
 import {Responsive, WidthProvider} from 'react-grid-layout';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
+import * as firebase from 'firebase/app';
+import 'firebase/database';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCAKy4AtmT0dkZxvRJRJzsStJdYuVUC6kM",
+  authDomain: "travel-dashboard.firebaseapp.com",
+  databaseURL: "https://travel-dashboard.firebaseio.com",
+  storageBucket: "travel-dashboard.appspot.com",
+  messagingSenderId: "62084682313"
+};
+
+firebase.initializeApp(firebaseConfig);
 
 import Clock from '../components/Clock';
 import City from '../components/City';
@@ -8,7 +20,8 @@ import Logo from '../components/Logo';
 import Country from '../components/Country';
 import Stats from '../components/Stats';
 import Flights from '../components/Flights';
-import dashboardLayout from '../components/dashboardLayout'
+import dashboardLayout from '../components/dashboardLayout';
+
 
 class DashboardGrid extends Component {
   constructor (props) {

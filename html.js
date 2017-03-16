@@ -2,8 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
 
-import firebase from './src/scripts/firebase';
-
 const BUILD_TIME = new Date().getTime()
 
 module.exports = React.createClass({
@@ -36,7 +34,6 @@ module.exports = React.createClass({
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          dangerouslySetInnerHTML={{__html: firebase}}
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
       </html>
