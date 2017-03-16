@@ -3,12 +3,13 @@
   "description": "Public Travel Dashboard",
   "version": "1.0.0",
   "author": "LB <mail@lb.ee>",
+  "repository": "https://github.com/lb-/travel-dashboard",
   "dependencies": {
     "bulma": "^0.4.0",
     "datascript": "^0.15.5",
     "firebase": "^3.7.2",
     "front-matter": "^2.0.7",
-    "gatsby": "^0.12.6",
+    "gatsby": "^0.12.38",
     "highlight.js": "^9.6.0",
     "history": "^2.0.2",
     "js-yaml": "^3.6.0",
@@ -25,15 +26,10 @@
     "react-headroom": "^2.1.2",
     "react-helmet": "^3.1.0",
     "react-moment": "^0.2.2",
-    "react-responsive-grid": "^0.3.3",
-    "react-typography": "^0.12.0",
-    "toml-js": "0.0.8",
-    "typography": "^0.13.3",
-    "typography-plugin-code": "^0.13.0",
-    "typography-theme-grand-view": "^0.15.0"
+    "toml-js": "0.0.8"
   },
   "devDependencies": {
-    "gh-pages": "^0.11.0"
+    "gh-pages": "^0.12.0"
   },
   "keywords": [
     "gatsby"
