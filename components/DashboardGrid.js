@@ -56,16 +56,24 @@ class DashboardGrid extends Component {
       <ResponsiveReactGridLayout
         className="layout"
         cols={cols}
-        rowHeight={50}
+        rowHeight={60}
         breakpoints={breakpoints}
         layouts={responsiveLayouts}
         >
-        <div key={'logo'} className={'test'}><Logo/></div>
-        <div key={'city'} className={'test'}>
-          <span className="text">City</span>
+        <div key={'logo'}><Logo/></div>
+        <div key={'city'}>
+          <div className="content box">
+            <h2 className="title">Chiang Mai</h2>
+            <p className="subtitle">City</p>
+            <p>31*, Sunny</p>
+          </div>
         </div>
-        <div key={'clock'} className={'test'}>
-          <span className="text">Clock</span>
+        <div key={'clock'}>
+          <div className="content box">
+            <h2 className="title">6:53pm</h2>
+            <p className="subtitle">Time</p>
+            <p>Three hours behind Brisbane</p>
+          </div>
         </div>
         <div key={'country'} className={'test'}>
           <span className="text">Country</span>
