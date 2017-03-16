@@ -16,7 +16,7 @@ import { config } from 'config';
 import "../node_modules/react-grid-layout/css/styles.css";
 import "../node_modules/react-resizable/css/styles.css";
 
-import Grid from '../components/Grid';
+import DashboardGrid from '../components/DashboardGrid';
 
 
 module.exports = React.createClass({
@@ -35,7 +35,7 @@ module.exports = React.createClass({
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-        <Grid />
+        <DashboardGrid />
         {this.props.children}
       </div>
     )

@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 import {Responsive, WidthProvider} from 'react-grid-layout';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
-import Logo from '../components/Grid';
+import Logo from '../components/Logo';
 
-import './grid.less'
+import './dashboardgrid.less'
 
-class Grid extends Component {
+class DashboardGrid extends Component {
   render () {
     let responsiveLayouts = {
       lg: [
@@ -83,4 +83,4 @@ class Grid extends Component {
   }
 };
 
-export default Grid
+export default DashboardGrid
