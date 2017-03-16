@@ -15,6 +15,7 @@ import { config } from 'config';
 
 import "../node_modules/react-grid-layout/css/styles.css";
 import "../node_modules/react-resizable/css/styles.css";
+import '../css/main';
 
 import DashboardGrid from '../components/DashboardGrid';
 
