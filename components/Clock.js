@@ -13,27 +13,35 @@ let describeDifferenceInTimezones = function(differenceInHours) {
 };
 
 class Clock extends Component {
-  render () {
+  constructor (props) {
+    super(props);
+
     let usersTimezone = moment.tz.guess();
     let usersDateTime = moment().tz(usersTimezone);
     let usersTimezoneOffset = moment.tz.zone(usersTimezone).offset(usersDateTime);
 
-    let locationTimezone = 'Australia/Sydney';
+    let locationTimezone = props.cityTimezone;
     let locationDateTime = moment().tz(locationTimezone);
     let locationTimezoneOffset = moment.tz.zone(locationTimezone).offset(usersDateTime);
 
     let differenceInHours = (usersTimezoneOffset - locationTimezoneOffset) / 60
     let differenceInHoursDescription = describeDifferenceInTimezones(differenceInHours);
-    
+
+    this.state = {
+      locationDateTime: locationDateTime,
+      differenceInHoursDescription: differenceInHoursDescription,
+    };
+  }
+  render () {
     return (
       <div className="content box notification is-warning">
         <h2 className="title">
           <Moment
-            format="ddd h:m a"
-            date={locationDateTime} />
+            format="ddd h:mm a"
+            date={this.state.locationDateTime} />
         </h2>
-        <p className="subtitle">Current Time</p>
-        <p>{differenceInHoursDescription}</p>
+        <p className="subtitle">Current Time in City</p>
+        <p>{this.state.differenceInHoursDescription}</p>
       </div>
     )
   }

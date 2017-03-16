@@ -15,7 +15,7 @@ class DashboardGrid extends Component {
     super(props);
     this.state = {
       cityName: null,
-      cityTimezone: 'Australia/Sydney',
+      cityTimezone: 'Asia/Bangkok',
       cityWeather: '31℃ and Sunny',
     };
   }
@@ -26,7 +26,7 @@ class DashboardGrid extends Component {
         console.log('setting currentLocation', currentLocation);
         this.setState({
           cityName: currentLocation.city.name,
-          // cityTimezone: currentLocation.city.timezone,
+          cityTimezone: currentLocation.city.timezone,
           cityWeather: '31℃ and Sunny',
         });
       }
