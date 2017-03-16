@@ -18,11 +18,13 @@ class Clock extends Component {
     let usersDateTime = moment().tz(usersTimezone);
     let usersTimezoneOffset = moment.tz.zone(usersTimezone).offset(usersDateTime);
 
-    let locationDateTime = moment().tz('Asia/Bangkok');
-    let locationTimezoneOffset = moment.tz.zone('Asia/Bangkok').offset(usersDateTime);
+    let locationTimezone = 'Australia/Sydney';
+    let locationDateTime = moment().tz(locationTimezone);
+    let locationTimezoneOffset = moment.tz.zone(locationTimezone).offset(usersDateTime);
 
     let differenceInHours = (usersTimezoneOffset - locationTimezoneOffset) / 60
     let differenceInHoursDescription = describeDifferenceInTimezones(differenceInHours);
+    
     return (
       <div className="content box notification is-warning">
         <h2 className="title">
