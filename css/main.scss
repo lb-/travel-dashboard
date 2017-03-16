@@ -1,4 +1,9 @@
 @import "~bulma";
+
+body {
+  background: gainsboro;
+}
+
 .content.box {
   height: 100%;
   overflow: scroll;
