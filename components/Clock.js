@@ -15,7 +15,7 @@ let describeDifferenceInTimezones = function(differenceInHours) {
 class Clock extends Component {
   render () {
     let usersTimezone = moment.tz.guess();
-    let usersDateTime = moment(usersTimezone);
+    let usersDateTime = moment().tz(usersTimezone);
     let usersTimezoneOffset = moment.tz.zone(usersTimezone).offset(usersDateTime);
 
     let locationDateTime = moment().tz('Asia/Bangkok');
