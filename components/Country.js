@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './country.less';
 
 class Country extends Component {
   render () {
     const countrySvg = 'https://www.amcharts.com/lib/3/maps/svg/thailandLow.svg'
     const countryStyle = {
       backgroundImage: 'url(' + countrySvg + ')',
+      backgroundRepeat: 'no-repeat',
+      backgroundBlendMode: 'soft-light',
+      backgroundSize: 'contain',
     };
     return (
       <div className="country content box notification is-success" style={countryStyle}>
