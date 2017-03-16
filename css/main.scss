@@ -1,3 +1,13 @@
+$blue: #4AA0D5;
+$light-blue: #D8E9F0;
+$dark-blue: #454553;
+$cool-red: #EB586F;
+
+$info: $blue; // stats, white text
+$warning: $light-blue; // clock & city, dark text
+$success: $dark-blue; // country, white text
+$primary: $cool-red; //flights, white text
+
 @import "~bulma";
 
 body {
