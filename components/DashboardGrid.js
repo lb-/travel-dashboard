@@ -3,6 +3,7 @@ import {Responsive, WidthProvider} from 'react-grid-layout';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 import Clock from '../components/Clock';
+import City from '../components/City';
 import Logo from '../components/Logo';
 import Country from '../components/Country';
 import Stats from '../components/Stats';
@@ -10,6 +11,27 @@ import Flights from '../components/Flights';
 import dashboardLayout from '../components/dashboardLayout'
 
 class DashboardGrid extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      cityName: null,
+      cityTimezone: 'Australia/Sydney',
+      cityWeather: '31℃ and Sunny',
+    };
+  }
+  componentWillMount () {
+    firebase.database().ref('/currentLocation/').once('value').then(
+      (snapshot) => {
+        let currentLocation = snapshot.val();
+        console.log('setting currentLocation', currentLocation);
+        this.setState({
+          cityName: currentLocation.city.name,
+          // cityTimezone: currentLocation.city.timezone,
+          cityWeather: '31℃ and Sunny',
+        });
+      }
+    );
+  }
   render () {
     return (
       <ResponsiveReactGridLayout
@@ -21,13 +43,13 @@ class DashboardGrid extends Component {
         >
         <div key={'logo'}><Logo/></div>
         <div key={'city'}>
-          <div className="content box notification is-warning">
-            <h2 className="title">Chiang Mai</h2>
-            <p className="subtitle">Current City</p>
-            <p>31&#8451; and Sunny</p>
-          </div>
+          <City
+            cityName={this.state.cityName}
+            cityWeather={this.state.cityWeather}/>
         </div>
-        <div key={'clock'}><Clock /></div>
+        <div key={'clock'}>
+          <Clock cityTimezone={this.state.cityTimezone}/>
+        </div>
         <div key={'country'}><Country/></div>
         <div key={'flights'}><Flights /></div>
         <div key={'stats'}><Stats /></div>
