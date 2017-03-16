@@ -4,16 +4,19 @@ import moment from 'moment';
 
 let describeDifferenceInTimezones = function(differenceInHours) {
   if (differenceInHours > 0) {
-    return Math.abs(differenceInHours) + ' hours ahead.'
+    return Math.abs(differenceInHours) + ' hours ahead.';
+  } else if (differenceInHours < 0) {
+    return Math.abs(differenceInHours) + ' hours behind.';
   } else {
-    return Math.abs(differenceInHours) + ' hours behind.'
+    return '';
   }
 };
 
 class Clock extends Component {
   render () {
-    let usersDateTime = moment().tz('Australia/Brisbane');
-    let usersTimezoneOffset = moment.tz.zone('Australia/Brisbane').offset(usersDateTime);
+    let usersTimezone = moment.tz.guess();
+    let usersDateTime = moment(usersTimezone);
+    let usersTimezoneOffset = moment.tz.zone(usersTimezone).offset(usersDateTime);
 
     let locationDateTime = moment().tz('Asia/Bangkok');
     let locationTimezoneOffset = moment.tz.zone('Asia/Bangkok').offset(usersDateTime);
@@ -27,7 +30,7 @@ class Clock extends Component {
             format="ddd h:m a"
             date={locationDateTime} />
         </h2>
-        <p className="subtitle">Time</p>
+        <p className="subtitle">Current Time</p>
         <p>{differenceInHoursDescription}</p>
       </div>
     )
