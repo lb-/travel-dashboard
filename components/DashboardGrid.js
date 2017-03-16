@@ -4,8 +4,7 @@ import {Responsive, WidthProvider} from 'react-grid-layout';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 import Logo from '../components/Logo';
-
-import './dashboardgrid.less'
+import './dashboardgrid.less';
 
 class DashboardGrid extends Component {
   render () {
@@ -62,7 +61,7 @@ class DashboardGrid extends Component {
         breakpoints={breakpoints}
         layouts={responsiveLayouts}
         >
-        <Logo key={'logo'} />
+        <div key={'logo'} className={'test'}><Logo/></div>
         <div key={'city'} className={'test'}>
           <span className="text">City</span>
         </div>
