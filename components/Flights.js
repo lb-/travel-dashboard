@@ -3,10 +3,16 @@ import React, { Component } from 'react';
 class FlightRow extends Component {
   render () {
     return (
-      <div className="columns">
-        <div className="column">{this.props.title}</div>
-        <div className="column">{this.props.distance} KMs</div>
-        <div className="column">{this.props.hours} hours</div>
+      <div className="columns is-mobile">
+        <div className="column">
+          <p className="title is-6">{this.props.title}</p>
+        </div>
+        <div className="column has-text-centered">
+          <strong>{this.props.distance}</strong> KMs
+          </div>
+        <div className="column has-text-centered">
+          <strong>{this.props.hours}</strong> hours
+          </div>
       </div>
     )
   }
@@ -22,6 +28,7 @@ class Flights extends Component {
       {title: 'Brisbane to Singapore', distance: 3200, hours: 3},
       {title: 'Singapore to Ho Chi Minh City', distance: 3900, hours: 2.5},
     ]
+    const totalFlights = flightData.reduce((accumulator, value) => accumulator + 1, 0)
     const flightRows = flightData.map((data, index) =>
       <FlightRow
         title={data.title}
@@ -31,6 +38,8 @@ class Flights extends Component {
     );
     return (
       <div className="content box">
+        <h2 className="title">Flights</h2>
+        <p className="subtitle">{totalFlights} Total</p>
         {flightRows}
       </div>
     )
