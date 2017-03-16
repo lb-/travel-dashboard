@@ -1,8 +1,8 @@
 
-import { Container } from 'react-responsive-grid'
+// import { Container } from 'react-responsive-grid'
 import Headroom from 'react-headroom'
-import '../css/markdown-styles';
-import { rhythm } from '../utils/typography'
+// import '../css/markdown-styles';
+// import { rhythm } from '../utils/typography'
 
 
 // want to keep
