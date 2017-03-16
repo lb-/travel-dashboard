@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import {Responsive, WidthProvider} from 'react-grid-layout';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
+import Clock from '../components/Clock';
 import Logo from '../components/Logo';
 import Country from '../components/Country';
 import Stats from '../components/Stats';
 import Flights from '../components/Flights';
-import './dashboardgrid.less';
 
 class DashboardGrid extends Component {
   render () {
@@ -73,13 +73,7 @@ class DashboardGrid extends Component {
             <p>31*, Sunny</p>
           </div>
         </div>
-        <div key={'clock'}>
-          <div className="content box notification is-warning">
-            <h2 className="title">6:53pm</h2>
-            <p className="subtitle">Time</p>
-            <p>Three hours behind Brisbane</p>
-          </div>
-        </div>
+        <div key={'clock'}><Clock /></div>
         <div key={'country'}><Country/></div>
         <div key={'flights'}><Flights /></div>
         <div key={'stats'}><Stats /></div>
