@@ -3,6 +3,7 @@ import {Responsive, WidthProvider} from 'react-grid-layout';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 import Logo from '../components/Logo';
+import Country from '../components/Country';
 import './dashboardgrid.less';
 
 class DashboardGrid extends Component {
@@ -75,9 +76,7 @@ class DashboardGrid extends Component {
             <p>Three hours behind Brisbane</p>
           </div>
         </div>
-        <div key={'country'} className={'test'}>
-          <span className="text">Country</span>
-        </div>
+        <div key={'country'}><Country/></div>
         <div key={'flights'} className={'test'}>
           <span className="text">Flights</span>
         </div>
