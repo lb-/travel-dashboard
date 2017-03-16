@@ -8,10 +8,10 @@ class FlightRow extends Component {
           <p className="title is-6">{this.props.title}</p>
         </div>
         <div className="column has-text-centered">
-          <strong>{this.props.distance}</strong> KMs
+          {this.props.distance} <small>KMs</small>
           </div>
         <div className="column has-text-centered">
-          <strong>{this.props.hours}</strong> hours
+          {this.props.hours} <small>hours</small>
           </div>
       </div>
     )
@@ -37,7 +37,7 @@ class Flights extends Component {
         key={index}/>
     );
     return (
-      <div className="content box">
+      <div className="content box notification is-primary">
         <h2 className="title">Flights</h2>
         <p className="subtitle">{totalFlights} Total</p>
         {flightRows}

@@ -24,9 +24,9 @@ class DashboardGrid extends Component {
         {i:'logo', w: 2, h: 6, x: 0, y: 0},
         {i:'city', w: 2, h: 3, x: 2, y: 0},
         {i:'clock', w: 2, h: 3, x: 4, y: 0},
-        {i:'country', w: 3, h: 11, x: 6, y: 0},
+        {i:'country', w: 3, h: 12, x: 6, y: 0},
         {i:'stats', w: 4, h: 3, x: 2, y: 2},
-        {i:'flights', w: 6, h: 5, x: 0, y: 6},
+        {i:'flights', w: 6, h: 6, x: 0, y: 6},
       ],
       sm: [
         {i:'logo', w: 1.5, h: 3, x: 0, y: 0},
@@ -67,14 +67,14 @@ class DashboardGrid extends Component {
         >
         <div key={'logo'}><Logo/></div>
         <div key={'city'}>
-          <div className="content box">
+          <div className="content box notification is-warning">
             <h2 className="title">Chiang Mai</h2>
             <p className="subtitle">City</p>
             <p>31*, Sunny</p>
           </div>
         </div>
         <div key={'clock'}>
-          <div className="content box">
+          <div className="content box notification is-warning">
             <h2 className="title">6:53pm</h2>
             <p className="subtitle">Time</p>
             <p>Three hours behind Brisbane</p>

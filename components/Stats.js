@@ -8,14 +8,14 @@ class Stats extends Component {
       fontSize: '500%',
     }
     return (
-      <div className="content box">
+      <div className="content box notification is-info">
         <div className="columns">
           <div className="column has-text-centered">
-            <h2 className="title-is-1">Countries</h2>
+            <h2 className="title is-3">Countries</h2>
             <p className="subtitle" style={statStyle}>{totalCountries}</p>
           </div>
           <div className="column has-text-centered">
-            <h2 className="title-is-1">Cities</h2>
+            <h2 className="title is-3">Cities</h2>
             <p className="subtitle" style={statStyle}>{totalCities}</p>
           </div>
         </div>
