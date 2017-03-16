@@ -8,8 +8,11 @@ class Footer extends Component {
         <div className="container">
           <div className="content has-text-centered">
             <p>
-              Made by LB with <a href="https://github.com/gatsbyjs/gatsby">Gatsby</a>,&nbsp;
-              <a href="http://bulma.io/">Bulma</a>.
+              Made by LB with&nbsp;
+              <a href="https://github.com/gatsbyjs/gatsby">Gatsby</a>,&nbsp;
+              <a href="http://bulma.io/">Bulma</a> and&nbsp;
+              <a href="https://github.com/STRML/react-grid-layout">React Grid Layout</a>.
+              Hosted on Github Pages.
             </p>
           </div>
         </div>
